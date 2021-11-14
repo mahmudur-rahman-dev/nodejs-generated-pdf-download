@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .border-gray {
+            border: 1px solid #aca2a2;
+        }
+
+        .h-250px {
+            height: 250px;
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc(var(--bs-gutter-y) * -1);
+            margin-right: calc(var(--bs-gutter-x) * -.5);
+            margin-left: calc(var(--bs-gutter-x) * -.5)
+        }
+
+        .mx-0 {
+            margin-right: 0 !important;
+            margin-left: 0 !important
+        }
+
+        .pt-3 {
+            padding-top: 1rem !important
+        }
+
+        .mt-3 {
+            margin-top: 1rem !important
+        }
+
+        .col-md-12 {
+            flex: 0 0 auto;
+            width: 100%
+        }
+
+        .col-md-6 {
+            flex: 0 0 auto;
+            width: 50%
+        }
+
+        .px-3 {
+            padding-right: 1rem !important;
+            padding-left: 1rem !important
+        }
+
+        .mx-3 {
+            margin-right: 1rem !important;
+            margin-left: 1rem !important
+        }
+
+        .py-2 {
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important
+        }
+
+        .px-2 {
+            padding-right: .5rem !important;
+            padding-left: .5rem !important
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important
+        }
+
+        .rounded-3 {
+            border-radius: .3rem !important
+        }
+
+        .text-decoration-underline {
+            text-decoration: underline !important
+        }
+
+        .d-flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+            display: flex !important;
+        }
+
+        .list-unstyled {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc(var(--bs-gutter-y) * -1);
+            margin-right: calc(var(--bs-gutter-x) * -.5);
+            margin-left: calc(var(--bs-gutter-x) * -.5)
+        }
+
+        .row > * {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            margin-top: var(--bs-gutter-y)
+        }
+
+        .col {
+            flex: 1 0 0%
+        }
+
+        .row-cols-auto > * {
+            flex: 0 0 auto;
+            width: auto
+        }
+
+        .row-cols-1 > * {
+            flex: 0 0 auto;
+            width: 100%
+        }
+
+        .row-cols-2 > * {
+            flex: 0 0 auto;
+            width: 50%
+        }
+
+        .row-cols-3 > * {
+            flex: 0 0 auto;
+            width: 33.3333333333%
+        }
+
+        .row-cols-4 > * {
+            flex: 0 0 auto;
+            width: 25%
+        }
+
+        .row-cols-5 > * {
+            flex: 0 0 auto;
+            width: 20%
+        }
+
+        .row-cols-6 > * {
+            flex: 0 0 auto;
+            width: 16.6666666667%
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="row mx-0 pt-3">
+        <!-- ESAF INFO -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Esaf Info:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>MSISDN</li>
+                        <li>NAME</li>
+                        <li>NID</li>
+                        <li>DOB</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{msisdn}}</li>
+                        <li>{{name}}</li>
+                        <li>{{nid}}</li>
+                        <li>{{dob}}</li>
+                        <li>{{address}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--         DEVICE INFO -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Device Info:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>MSISDN</li>
+                        <li>IMEI(s)</li>
+                        <li>HANDSET MODEL</li>
+                        <li>IMSI</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{msisdns}}</li>
+                        <li>{{imeiNumbers}}</li>
+                        <li>{{}}</li>
+                        <li>{{imsiNumbers}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--         TIME DURATION -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Time Duration:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>START DATE</li>
+                        <li>END DATE</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{startDate}}</li>
+                        <li>{{endDate}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOTAL COUNT -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Total Count:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>OUTGOING CALL</li>
+                        <li>INCOMING CALL</li>
+                        <li>OUTGOING SMS</li>
+                        <li>INCOMING SMS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+
+                    <ul class="list-unstyled">
+                        <li>{{outgoingCall}}</li>
+                        <li>{{incomingCall}}</li>
+                        <li>{{outgoingSms}}</li>
+                        <li>{{incomingSms}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP 10 CONTACTED PEOPLE -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Top 10 Contacted People:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        {{topContactedPartyBList}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAST CALL LOCATION -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">Last Call Location:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>DATE AND TIME</li>
+                        <li>B PARTY</li>
+                        <li>SERVICE TYPE</li>
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{eventTime}}</li>
+                        <li>{{partyB}}</li>
+                        <li>{{usageType}}</li>
+                        <li>{{lacId}}</li>
+                        <li>{{cellId}}</li>
+                        <li>{{btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE NUMBER TWO -->
+<div class="page">
+    <div class="row mx-0 py-3">
+        <!-- MOST COMMON LOCATION (DAY)(0900-1700) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Most Common Location (DAY)(0900-1700):
+                </h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{lac}}</li>
+                        <li>{{cellId}}</li>
+                        <li>{{btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOST COMMON LOCATION (NIGHT)(0000-0600) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Most Common Location (Night)(0000-0600):
+                </h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{lac}}</li>
+                        <li>{{cellId}}</li>
+                        <li>{{btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Activity Graph (Timeline vs Usage) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Usage Activity Graph (Timeline vs Usage):
+                </h3>
+                <span>GRAPH WILL LOAD HERE ...</span>
+            </div>
+        </div>
+
+        <!-- Filter analysis report which are marked for export (May be Multiple) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Filter analysis report which are marked for export (May be
+                    Multiple):
+                </h3>
+                <span>DATA WILL LOAD HERE ...</span>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                    <h3 class="text-decoration-underline">MAP:</h3>
+                    <span>MAP WILL LOAD HERE ...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <div class="row mx-0 pt-3">
+        <!-- ESAF INFO -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Esaf Info:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>MSISDN</li>
+                        <li>NAME</li>
+                        <li>NID</li>
+                        <li>DOB</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{msisdn}}</li>
+                        <li>{{name}}</li>
+                        <li>{{nid}}</li>
+                        <li>{{dob}}</li>
+                        <li>{{address}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--         DEVICE INFO -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Device Info:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>MSISDN</li>
+                        <li>IMEI(s)</li>
+                        <li>HANDSET MODEL</li>
+                        <li>IMSI</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{msisdns}}</li>
+                        <li>{{imeiNumbers}}</li>
+                        <li>{{}}</li>
+                        <li>{{imsiNumbers}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--         TIME DURATION -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Time Duration:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>START DATE</li>
+                        <li>END DATE</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{startDate}}</li>
+                        <li>{{endDate}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOTAL COUNT -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Total Count:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>OUTGOING CALL</li>
+                        <li>INCOMING CALL</li>
+                        <li>OUTGOING SMS</li>
+                        <li>INCOMING SMS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+
+                    <ul class="list-unstyled">
+                        <li>{{outgoingCall}}</li>
+                        <li>{{incomingCall}}</li>
+                        <li>{{outgoingSms}}</li>
+                        <li>{{incomingSms}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP 10 CONTACTED PEOPLE -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Top 10 Contacted People:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        {{topContactedPartyBList}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAST CALL LOCATION -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">Last Call Location:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>DATE AND TIME</li>
+                        <li>B PARTY</li>
+                        <li>SERVICE TYPE</li>
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{eventTime}}</li>
+                        <li>{{partyB}}</li>
+                        <li>{{usageType}}</li>
+                        <li>{{lacId}}</li>
+                        <li>{{cellId}}</li>
+                        <li>{{btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE NUMBER TWO -->
+<div class="page">
+    <div class="row mx-0 py-3">
+        <!-- MOST COMMON LOCATION (DAY)(0900-1700) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Most Common Location (DAY)(0900-1700):
+                </h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{lac}}</li>
+                        <li>{{cellId}}</li>
+                        <li>{{btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOST COMMON LOCATION (NIGHT)(0000-0600) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Most Common Location (Night)(0000-0600):
+                </h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{lac}}</li>
+                        <li>{{cellId}}</li>
+                        <li>{{btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Activity Graph (Timeline vs Usage) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Usage Activity Graph (Timeline vs Usage):
+                </h3>
+                <span>GRAPH WILL LOAD HERE ...</span>
+            </div>
+        </div>
+
+        <!-- Filter analysis report which are marked for export (May be Multiple) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Filter analysis report which are marked for export (May be
+                    Multiple):
+                </h3>
+                <span>DATA WILL LOAD HERE ...</span>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                    <h3 class="text-decoration-underline">MAP:</h3>
+                    <span>MAP WILL LOAD HERE ...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

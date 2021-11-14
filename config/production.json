@@ -1,0 +1,8 @@
+{
+    "backendApi" : {
+        "queryServiceBaseUrl": "http://dip-query-service",
+        "queryServicePort": "5005",
+        "analysisRequestServicePath":"/query-service/api/v1/private/discovery/search-data/",
+        "analysisReportDownloadPdfUrlPath": "query-service/api/v1/private/analysis/report"
+    }
+}

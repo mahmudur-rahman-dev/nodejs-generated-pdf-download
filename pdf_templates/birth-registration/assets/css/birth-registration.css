@@ -1,0 +1,60 @@
+.br-card-background {
+    background-image: url("../img/birthRegistrationBackground.png");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position-x: 36%;
+    background-position-y: 0px;
+    background-size: 226px 128px;
+}
+
+.br-english-detail-color {
+    background-color: #EDF6ED;
+    background-image: url("../img/PersonIcon_medium_green.svg");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    background-size: 7.5rem 7.5rem;
+}
+
+.br-bengali-detail-color {
+    background-color: #EDF1FF;
+    background-image: url("../img/PersonIcon_medium_purple.svg");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    background-size: 7.5rem 7.5rem;
+}
+
+
+.br-info {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+
+.br-color {
+    color: #795548;
+}
+
+.br-info .label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.br-info .info {
+    font-size: 1rem;
+}
+
+.br-info .info-link {
+    font-size: 1rem;
+    color: #1890FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.rnd {
+    border-radius: 10px;
+    overflow: hidden;
+}

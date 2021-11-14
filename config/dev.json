@@ -1,0 +1,8 @@
+{
+    "backendApi": {
+        "queryServiceBaseUrl": "http://10.101.3.175",
+        "queryServicePort": "5005",
+        "analysisRequestServicePath":"/query-service/api/v1/private/discovery/search-data/",
+        "analysisReportDownloadPdfUrlPath": "query-service/api/v1/private/analysis/report"
+    }
+}

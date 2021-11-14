@@ -1,0 +1,213 @@
+<!-- PAGE NUMBER ONE -->
+<div>
+    <div class="row mx-0 pt-3">
+        <!-- ESAF INFO -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Esaf Info:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>MSISDN</li>
+                        <li>NAME</li>
+                        <li>NID</li>
+                        <li>DOB</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{esafInfo.msisdn}}</li>
+                        <li>{{esafInfo.name}}</li>
+                        <li>{{esafInfo.nid}}</li>
+                        <li>{{esafInfo.dob}}</li>
+                        <li>{{esafInfo.address}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--         DEVICE INFO -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Device Info:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>MSISDN</li>
+                        <li>IMEI(s)</li>
+                        <li>IMSI</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{deviceInfo.msisdns}}</li>
+                        <li>{{deviceInfo.imeiNumbers}}</li>
+                        <li>{{deviceInfo.imsiNumbers}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--         TIME DURATION -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Time Duration:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>START DATE</li>
+                        <li>END DATE</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{timeDuration.startDate}}</li>
+                        <li>{{timeDuration.endDate}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Break -->
+        <div class="page"></div>
+
+        <!-- TOTAL COUNT -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Total Count:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        <li>OUTGOING CALL</li>
+                        <li>INCOMING CALL</li>
+                        <li>OUTGOING SMS</li>
+                        <li>INCOMING SMS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+
+                    <ul class="list-unstyled">
+                        <li>{{totalCount.outgoingCall}}</li>
+                        <li>{{totalCount.incomingCall}}</li>
+                        <li>{{totalCount.outgoingSms}}</li>
+                        <li>{{totalCount.incomingSms}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP 10 CONTACTED PEOPLE -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 mx-3">
+                <h3 class="text-decoration-underline">Top 10 Contacted People:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled">
+                        {{topContactedPeople}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAST CALL LOCATION -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 height-auto mx-3">
+                <h3 class="text-decoration-underline">Last Call Location:</h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled" style="width: 250px">
+                        <li>DATE AND TIME</li>
+                        <li>B PARTY</li>
+                        <li>SERVICE TYPE</li>
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{lastCallLocation.eventTime}}</li>
+                        <li>{{lastCallLocation.partyB}}</li>
+                        <li>{{lastCallLocation.usageType}}</li>
+                        <li>{{lastCallLocation.lacId}}</li>
+                        <li>{{lastCallLocation.cellId}}</li>
+                        <li>{{lastCallLocation.btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE NUMBER TWO -->
+<div class="page">
+    <div class="row mx-0 py-3">
+        <!-- MOST COMMON LOCATION (DAY)(0900-1700) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Most Common Location (DAY)(0900-1700):
+                </h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled" style="width: 250px">
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{commonLocationDay.lac}}</li>
+                        <li>{{commonLocationDay.cellId}}</li>
+                        <li>{{commonLocationDay.btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOST COMMON LOCATION (NIGHT)(0000-0600) -->
+        <div class="col-md-12">
+            <div class="border-gray px-3 py-2 mt-3 rounded-3 h-250px mx-3">
+                <h3 class="text-decoration-underline">
+                    Most Common Location (Night)(0000-0600):
+                </h3>
+                <div class="d-flex">
+                    <ul class="list-unstyled" style="width: 250px">
+                        <li>LAC ID</li>
+                        <li>CELL ID</li>
+                        <li>ADDRESS</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                        <li class="px-2">:</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>{{commonLocationNight.lac}}</li>
+                        <li>{{commonLocationNight.cellId}}</li>
+                        <li>{{commonLocationNight.btsAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

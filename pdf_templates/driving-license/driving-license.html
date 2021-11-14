@@ -1,0 +1,166 @@
+<!doctype html>
+
+<head>
+    <title>Driving License</title>
+    <style>
+        .w-100p {
+            width: 100% !important;
+        }
+
+        .w-50p {
+            width: 50% !important;
+        }
+
+        .w-40p {
+            width: 40% !important;
+        }
+
+        .w-30p {
+            width: 30% !important;
+        }
+
+        .driving-license-left-area {
+            background-color: #fdeee9 !important;
+        }
+
+        .info {
+            font-size: 15px !important;
+            font-weight: 500 !important;
+        }
+
+        .header {
+            font-size: 12px !important;
+            font-weight: 400 !important;
+        }
+
+        .mt-5px {
+            margin-top: 5px !important;
+        }
+
+        .mb-10px {
+            margin-bottom: 10px !important;
+        }
+
+        .ml-5px {
+            margin-left: 5px !important;
+        }
+
+        .pl-5px {
+            padding-left: 5px !important;
+        }
+
+        .py-5px {
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+
+        .driving-license-right-area {
+            background-color: #EDF1FF !important;
+        }
+
+        .d-block {
+            display: block !important;
+        }
+
+        .ml-auto {
+            display: block !important;
+            margin: 0 auto !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="w-100p" style="margin-top: 10px">
+        <tbody>
+            <tr>
+                <td class="w-30p">
+                    <div>
+                        <img src="data:image/png;base64,{{photo}}" alt="License owner photo"
+                            style="width: 180px; max-height: 200px;">
+
+                        <h2>{{name}}</h2>
+                        <img src="data:image/png;base64,{{signature}}" style="max-width: 200px;"alt="signature">
+                    </div>
+                </td>
+                <td class="w-40p driving-license-left-area" style="vertical-align:top">
+                    <div class="pl-5px py-5px">
+                        <div class="header mb-10px ml-5px mt-5px">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxMyAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik02LjUgN0M3LjQ2MTY0IDcgOC4yOTQzNSA2LjY1NTA5IDguOTc0NzIgNS45NzQ1OEM5LjY1NTEgNS4yOTQxOCAxMCA0LjQ2MTY3IDEwIDMuNDk5ODlDMTAgMi41Mzg0NCA5LjY1NTEgMS43MDU4MiA4Ljk3NDYxIDEuMDI1MkM4LjI5NDEyIDAuMzQ0OTExIDcuNDYxNTMgMCA2LjUgMEM1LjUzODI1IDAgNC43MDU3NyAwLjM0NDkxMSA0LjAyNTM5IDEuMDI1MzFDMy4zNDUwMSAxLjcwNTcxIDMgMi41MzgzMyAzIDMuNDk5ODlDMyA0LjQ2MTY3IDMuMzQ1MDEgNS4yOTQyOSA0LjAyNTUgNS45NzQ2OUM0LjcwNTk5IDYuNjU0OTggNS41Mzg1OCA3IDYuNSA3WiIgZmlsbD0iIzMyM0M0NyIvPg0KPHBhdGggZD0iTTEyLjk2ODUgMTEuNDI0NEMxMi45NDc1IDExLjEyMjkgMTIuOTA0OSAxMC43OTQgMTIuODQyMiAxMC40NDY2QzEyLjc3OSAxMC4wOTY3IDEyLjY5NzYgOS43NjU4OCAxMi42MDAxIDkuNDYzNTJDMTIuNDk5NCA5LjE1MSAxMi4zNjI0IDguODQyMzggMTIuMTkzMiA4LjU0NjY0QzEyLjAxNzUgOC4yMzk2NyAxMS44MTExIDcuOTcyMzcgMTEuNTc5NSA3Ljc1MjQyQzExLjMzNzMgNy41MjIzMSAxMS4wNDA5IDcuMzM3MzEgMTAuNjk4IDcuMjAyMzZDMTAuMzU2MyA3LjA2ODEyIDkuOTc3NzEgNy4wMDAxMiA5LjU3MjY5IDcuMDAwMTJDOS40MTM2MyA3LjAwMDEyIDkuMjU5OCA3LjA2NDk0IDguOTYyNzIgNy4yNTcwMkM4Ljc3OTg4IDcuMzc1NDQgOC41NjYwMiA3LjUxMjQgOC4zMjczIDcuNjYzODdDOC4xMjMxOSA3Ljc5MzAzIDcuODQ2NjcgNy45MTQwNSA3LjUwNTEzIDguMDIzNjFDNy4xNzE5MSA4LjEzMDcgNi44MzM1OCA4LjE4NTAxIDYuNDk5NjQgOC4xODUwMUM2LjE2NTcxIDguMTg1MDEgNS44Mjc1IDguMTMwNyA1LjQ5MzkyIDguMDIzNjFDNS4xNTI3MyA3LjkxNDE3IDQuODc2MjIgNy43OTMxNSA0LjY3MjM0IDcuNjYzOTlDNC40MzU4OSA3LjUxMzkzIDQuMjIxOSA3LjM3Njk4IDQuMDM2MzMgNy4yNTY5MUMzLjczOTYxIDcuMDY0ODIgMy41ODU2NiA3IDMuNDI2NiA3QzMuMDIxNDUgNyAyLjY0Mjk0IDcuMDY4MTIgMi4zMDE0IDcuMjAyNDhDMS45NTg3OSA3LjMzNzE5IDEuNjYyMTggNy41MjIyIDEuNDE5NzggNy43NTI1NEMxLjE4ODMyIDcuOTcyNjEgMC45ODE4MyA4LjIzOTc5IDAuODA2MzYzIDguNTQ2NjRDMC42MzcxOTcgOC44NDIzOCAwLjUwMDI0NyA5LjE1MDg5IDAuMzk5NDM3IDkuNDYzNjRDMC4zMDIwNzQgOS43NjYgMC4yMjA2NDEgMTAuMDk2NyAwLjE1NzM5NyAxMC40NDY2QzAuMDk0NzQ3MyAxMC43OTM1IDAuMDUyMTg4MyAxMS4xMjI2IDAuMDMxMTQ2NiAxMS40MjQ4QzAuMDEwNDYxNCAxMS43MjA5IDAgMTIuMDI4MiAwIDEyLjMzODZDMCAxMy4xNDY0IDAuMjU4NTY0IDEzLjgwMDQgMC43Njg0NCAxNC4yODI2QzEuMjcyMDIgMTQuNzU4NiAxLjkzODM0IDE1IDIuNzQ4NjIgMTVIMTAuMjUxNEMxMS4wNjE3IDE1IDExLjcyNzcgMTQuNzU4NyAxMi4yMzE0IDE0LjI4MjZDMTIuNzQxNCAxMy44MDA3IDEzIDEzLjE0NjYgMTMgMTIuMzM4NUMxMi45OTk5IDEyLjAyNjcgMTIuOTg5MyAxMS43MTkxIDEyLjk2ODUgMTEuNDI0NFoiIGZpbGw9IiMzMjNDNDciLz4NCjwvc3ZnPg=="
+                                alt="Couldn't load SVG" />
+                            <span>Personal Info</span>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Gender</div>
+                            <div class="info">{{gender}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Date of Birth</div>
+                            <div class="info">{{dateOfBirth}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Father</div>
+                            <div class="info">{{fatherName}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Spouse Name</div>
+                            <div class="info">{{spouseName}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Mobile Number</div>
+                            <div class="info">{{mobileNo}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Present Address</div>
+                            <div class="info">{{presentAddress}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">Permanent Address</div>
+                            <div class="info">{{permanentAddress}}</div>
+                        </div>
+                    </div>
+                </td>
+                <td class="w-30p driving-license-right-area " style="vertical-align:top" >
+                    <div class="pl-5px py-5px">
+                        <div class="header mb-10px ml-5px mt-5px">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxMyAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik02LjUgN0M3LjQ2MTY0IDcgOC4yOTQzNSA2LjY1NTA5IDguOTc0NzIgNS45NzQ1OEM5LjY1NTEgNS4yOTQxOCAxMCA0LjQ2MTY3IDEwIDMuNDk5ODlDMTAgMi41Mzg0NCA5LjY1NTEgMS43MDU4MiA4Ljk3NDYxIDEuMDI1MkM4LjI5NDEyIDAuMzQ0OTExIDcuNDYxNTMgMCA2LjUgMEM1LjUzODI1IDAgNC43MDU3NyAwLjM0NDkxMSA0LjAyNTM5IDEuMDI1MzFDMy4zNDUwMSAxLjcwNTcxIDMgMi41MzgzMyAzIDMuNDk5ODlDMyA0LjQ2MTY3IDMuMzQ1MDEgNS4yOTQyOSA0LjAyNTUgNS45NzQ2OUM0LjcwNTk5IDYuNjU0OTggNS41Mzg1OCA3IDYuNSA3WiIgZmlsbD0iIzMyM0M0NyIvPg0KPHBhdGggZD0iTTEyLjk2ODUgMTEuNDI0NEMxMi45NDc1IDExLjEyMjkgMTIuOTA0OSAxMC43OTQgMTIuODQyMiAxMC40NDY2QzEyLjc3OSAxMC4wOTY3IDEyLjY5NzYgOS43NjU4OCAxMi42MDAxIDkuNDYzNTJDMTIuNDk5NCA5LjE1MSAxMi4zNjI0IDguODQyMzggMTIuMTkzMiA4LjU0NjY0QzEyLjAxNzUgOC4yMzk2NyAxMS44MTExIDcuOTcyMzcgMTEuNTc5NSA3Ljc1MjQyQzExLjMzNzMgNy41MjIzMSAxMS4wNDA5IDcuMzM3MzEgMTAuNjk4IDcuMjAyMzZDMTAuMzU2MyA3LjA2ODEyIDkuOTc3NzEgNy4wMDAxMiA5LjU3MjY5IDcuMDAwMTJDOS40MTM2MyA3LjAwMDEyIDkuMjU5OCA3LjA2NDk0IDguOTYyNzIgNy4yNTcwMkM4Ljc3OTg4IDcuMzc1NDQgOC41NjYwMiA3LjUxMjQgOC4zMjczIDcuNjYzODdDOC4xMjMxOSA3Ljc5MzAzIDcuODQ2NjcgNy45MTQwNSA3LjUwNTEzIDguMDIzNjFDNy4xNzE5MSA4LjEzMDcgNi44MzM1OCA4LjE4NTAxIDYuNDk5NjQgOC4xODUwMUM2LjE2NTcxIDguMTg1MDEgNS44Mjc1IDguMTMwNyA1LjQ5MzkyIDguMDIzNjFDNS4xNTI3MyA3LjkxNDE3IDQuODc2MjIgNy43OTMxNSA0LjY3MjM0IDcuNjYzOTlDNC40MzU4OSA3LjUxMzkzIDQuMjIxOSA3LjM3Njk4IDQuMDM2MzMgNy4yNTY5MUMzLjczOTYxIDcuMDY0ODIgMy41ODU2NiA3IDMuNDI2NiA3QzMuMDIxNDUgNyAyLjY0Mjk0IDcuMDY4MTIgMi4zMDE0IDcuMjAyNDhDMS45NTg3OSA3LjMzNzE5IDEuNjYyMTggNy41MjIyIDEuNDE5NzggNy43NTI1NEMxLjE4ODMyIDcuOTcyNjEgMC45ODE4MyA4LjIzOTc5IDAuODA2MzYzIDguNTQ2NjRDMC42MzcxOTcgOC44NDIzOCAwLjUwMDI0NyA5LjE1MDg5IDAuMzk5NDM3IDkuNDYzNjRDMC4zMDIwNzQgOS43NjYgMC4yMjA2NDEgMTAuMDk2NyAwLjE1NzM5NyAxMC40NDY2QzAuMDk0NzQ3MyAxMC43OTM1IDAuMDUyMTg4MyAxMS4xMjI2IDAuMDMxMTQ2NiAxMS40MjQ4QzAuMDEwNDYxNCAxMS43MjA5IDAgMTIuMDI4MiAwIDEyLjMzODZDMCAxMy4xNDY0IDAuMjU4NTY0IDEzLjgwMDQgMC43Njg0NCAxNC4yODI2QzEuMjcyMDIgMTQuNzU4NiAxLjkzODM0IDE1IDIuNzQ4NjIgMTVIMTAuMjUxNEMxMS4wNjE3IDE1IDExLjcyNzcgMTQuNzU4NyAxMi4yMzE0IDE0LjI4MjZDMTIuNzQxNCAxMy44MDA3IDEzIDEzLjE0NjYgMTMgMTIuMzM4NUMxMi45OTk5IDEyLjAyNjcgMTIuOTg5MyAxMS43MTkxIDEyLjk2ODUgMTEuNDI0NFoiIGZpbGw9IiMzMjNDNDciLz4NCjwvc3ZnPg=="
+                                alt="Couldn't load SVG" />
+                            <span>License Detail</span>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header">License Detail</div>
+                            <div class="info">{{licenseType}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header ">Issue / Renewal</div>
+                            <div class="info">{{issueDate}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header ">License No</div>
+                            <div class="info">{{licenseNumber}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header ">Issuing Authority</div>
+                            <div class="info">{{issuingAuthority}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header ">Apply Date</div>
+                            <div class="info">{{applyDate}}</div>
+                        </div>
+                        <div class="mb-10px ml-5px">
+                            <div class="header ">Expiry Date</div>
+                            <div class="info">{{expiryDate}}</div>
+                        </div>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
